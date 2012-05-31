@@ -1,0 +1,21 @@
+// $Id$
+
+project (ACE_XML_Utils) : install, acelib, xerces, ace_output {
+  sharedname   += ACE_XML_Utils
+  dynamicflags += XML_UTILS_BUILD_DLL
+
+  specific {
+    install_dir = ace/XML_Utils
+  }
+
+  Header_Files {
+    XML_Utils_Export.h
+  }
+
+  Source_Files {
+    XML_Error_Handler.cpp
+    XercesString.cpp
+    XML_Schema_Resolver.cpp
+    XML_Typedefs.cpp
+  }
+}
